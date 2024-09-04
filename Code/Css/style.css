@@ -1,0 +1,155 @@
+:root{
+    --color-white: #fff;
+    --color-dark1: rgb(39, 39, 39);
+    --color-dark2: #2d2d2d;
+    --color-dark3: #414141;
+    --color-dark4: #1c1c1c;
+    --color-dark5: #343434;
+    --color-purple: #b040ff;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    background-color: var(--color-dark1);
+    color: var(--color-white);
+}
+/*Navegação-menu, logo_header header*/
+
+.header img{
+    width: 8em;
+
+}
+.header,
+.Navegação-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header{
+    background-color: var(--color-dark2);
+    box-shadow: 1px 1px 4px var(--color-dark4);
+    height: 6em;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+.Navegação-menu{
+    gap: 3em;
+    z-index: 2;
+}
+.Navegação-menu a{
+    text-decoration: none;
+    color: var(--color-purple);
+    transition: 1s;
+    font-weight: bold;
+}
+.text-content{
+    padding-top: 3em;
+    transition: 1s;
+}
+.Quem-somos{
+   text-align: center;
+   display: flex;
+   width: 100%;
+   margin:0;
+   margin-bottom:6em;
+   height: 15em;
+   flex-direction: column;
+   justify-content:baseline;
+   /*float: right;*/
+
+}
+.Quem-somos p{
+    text-align: justify;
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+    
+}
+.botão-menu{
+    background-color:transparent;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    display: none;
+}
+.Sobre-o-Projeto-Objetivo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+}
+.Sobre-o-Projeto, .Objetivo{
+    flex: 1;
+    padding: 1em;
+    margin: 0;
+    gap: 1em;
+    text-align: justify;
+    text-align: center;
+    margin-bottom:6em;
+}
+.Sobre-o-Projeto h1, .Objetivo h1{
+    text-align: center;
+    margin-bottom: 1.3em ;
+}
+.Acoes{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: justify;
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+}
+.Acoes h1{
+    text-align: center;
+}
+.Lista-de-acoes{
+    background-color: var(--color-dark3);
+    width: 80%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 1em;
+    list-style-type: disc;
+    display: inline-block;
+    padding-left: 0;
+    text-align: left;
+    margin: 0 auto;
+    
+}
+.Lista-de-acoes li{
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+    
+}
+.videos-ou-fotos h1{
+    margin-top:3em;
+    text-align: center;
+}
+.videos-ou-fotos p{
+    margin:0;
+    padding-left: 2em;
+}
+@media screen and (max-width: 768px){
+    .botão-menu{
+        display: block;
+    }
+    .Navegação-menu{
+        position: absolute;
+        flex-direction: column;
+        top:0;
+        background-color: var(--color-dark5);
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+}
+@keyframes showSidebar{
+    from{margin-left: -100vw;}
+    top{margin-left: -10vw;}
+}
